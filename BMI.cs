@@ -21,7 +21,7 @@ namespace ConsoleApplication1
                 float bmi_kg;
                 float bmi_lbs;
 
-                if (a == "KG")
+                if (a == "KG".ToLower())
                 {
                     Console.WriteLine("What is your weight in Kilograms?");
                     string kg_weight = Console.ReadLine();
