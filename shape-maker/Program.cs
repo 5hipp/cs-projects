@@ -1,4 +1,6 @@
-﻿class shapeMaker
+﻿using System.Xml.Schema;
+
+class shapeMaker
 {
     public class test
     {
@@ -12,7 +14,9 @@
 
             Console.WriteLine("Circle values are " + c.X + " " + c.Y + " and "+ c.Radius);
 
+            Triangle t = new Triangle(100, 250, 300);
 
+            Console.WriteLine("Triangle values are " + t.X + " " + t.Y + " and " + t.Z);
 
         }
     }
@@ -63,7 +67,6 @@
         }
     }
 
-
     public class Circle : Shape
     {
         private double radius;
@@ -72,18 +75,6 @@
 
         }
 
-        public double Radius
-        {
-            get
-            {
-                return radius;
-            }
-            set
-            {
-                if (value > 0.0)
-                    radius = value;
-            }
-        }
 
         public Circle(int xValue, int yValue, double radiusIn)
         {
@@ -98,6 +89,54 @@
         {
             setValues(xValue, yValue);
             radius = radiusIn;
+        }
+
+        public double Radius
+        {
+            get
+            {
+                return radius;
+            }
+            set
+            {
+                if (value > 0.0)
+                    radius = value;
+            }
+        }
+    }
+
+    public class Triangle : Shape
+    {
+        private int z;
+
+        public Triangle()
+        {
+        }
+
+        public Triangle(int xValue, int yValue, int zValue)
+        {
+            X = xValue;
+            Y = yValue;
+
+            z = zValue;
+        }
+
+        public void setData(int xValue, int yValue, int zValue)
+        {
+            setValues(xValue, yValue);
+            z = zValue;
+        }
+
+        public int Z
+        {
+            get
+            {
+                return z;
+            }
+            set
+            {
+                z = value;
+            }
         }
     }
 }
