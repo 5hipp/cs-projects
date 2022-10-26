@@ -1,0 +1,15 @@
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.csproj.AssemblyReference.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.AssemblyInfoInputs.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.AssemblyInfo.cs
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.csproj.CoreCompileInputs.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\bin\Debug\net6.0\shape-maker.exe
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\bin\Debug\net6.0\shape-maker.deps.json
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\bin\Debug\net6.0\shape-maker.runtimeconfig.json
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\bin\Debug\net6.0\shape-maker.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\bin\Debug\net6.0\shape-maker.pdb
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\refint\shape-maker.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.pdb
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\shape-maker.genruntimeconfig.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\shape-maker\obj\Debug\net6.0\ref\shape-maker.dll
