@@ -1,0 +1,15 @@
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.csproj.AssemblyReference.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.AssemblyInfoInputs.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.AssemblyInfo.cs
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.csproj.CoreCompileInputs.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\bin\Debug\net6.0\bmi-calc1.exe
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\bin\Debug\net6.0\bmi-calc1.deps.json
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\bin\Debug\net6.0\bmi-calc1.runtimeconfig.json
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\bin\Debug\net6.0\bmi-calc1.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\bin\Debug\net6.0\bmi-calc1.pdb
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\refint\bmi-calc1.dll
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.pdb
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\bmi-calc1.genruntimeconfig.cache
+C:\Users\Joe\Documents\GitHub\cs-projects\bmi-calc1\obj\Debug\net6.0\ref\bmi-calc1.dll
