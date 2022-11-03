@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joesi\\source\\repos\\Uni Work\\Assignment App\\AssignmentApp\\AssignmentApp.csproj": {}
+    "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joesi\\source\\repos\\Uni Work\\Assignment App\\AssignmentApp\\AssignmentApp.csproj": {
+    "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joesi\\source\\repos\\Uni Work\\Assignment App\\AssignmentApp\\AssignmentApp.csproj",
+        "projectUniqueName": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
         "projectName": "AssignmentApp",
-        "projectPath": "C:\\Users\\joesi\\source\\repos\\Uni Work\\Assignment App\\AssignmentApp\\AssignmentApp.csproj",
+        "projectPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
         "packagesPath": "C:\\Users\\joesi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joesi\\source\\repos\\Uni Work\\Assignment App\\AssignmentApp\\obj\\",
+        "outputPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joesi\\AppData\\Roaming\\NuGet\\NuGet.Config",

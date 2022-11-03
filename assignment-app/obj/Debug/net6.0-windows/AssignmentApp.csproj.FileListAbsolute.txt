@@ -15,3 +15,20 @@ C:\Users\joesi\source\repos\Uni Work\Assignment App\AssignmentApp\obj\Debug\net6
 C:\Users\joesi\source\repos\Uni Work\Assignment App\AssignmentApp\obj\Debug\net6.0-windows\AssignmentApp.pdb
 C:\Users\joesi\source\repos\Uni Work\Assignment App\AssignmentApp\obj\Debug\net6.0-windows\AssignmentApp.genruntimeconfig.cache
 C:\Users\joesi\source\repos\Uni Work\Assignment App\AssignmentApp\obj\Debug\net6.0-windows\ref\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows\AssignmentApp.exe
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows\AssignmentApp.deps.json
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows\AssignmentApp.runtimeconfig.json
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows\AssignmentApp.pdb
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.csproj.AssemblyReference.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.Form1.resources
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.csproj.GenerateResource.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.AssemblyInfoInputs.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.AssemblyInfo.cs
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.csproj.CoreCompileInputs.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\refint\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.pdb
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\AssignmentApp.genruntimeconfig.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows\ref\AssignmentApp.dll

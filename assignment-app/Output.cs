@@ -36,5 +36,10 @@ namespace AssignmentApp
         {
             g.DrawRectangle(Pen, xPos, yPos, xPos + size, yPos + size);
         }
+
+        public void DrawCircle(int radius)
+        {
+           
+        }
     }
 }
