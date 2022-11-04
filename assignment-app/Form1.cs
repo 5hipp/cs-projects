@@ -4,6 +4,8 @@ namespace AssignmentApp
     {
         Canvas Canvas;
         Bitmap OutputBitmap = new Bitmap(640, 480);
+        int cursorX = -1;
+        int cursorY = -1;
 
         public Form1()
         {
@@ -21,7 +23,6 @@ namespace AssignmentApp
             if (e.KeyCode == Keys.Enter) 
             {
                 String[] commandInputs = commandLineInput.Text.Split(' ');
-                
 
                 if (commandInputs[0].Equals("line") == true)
                 {
@@ -49,13 +50,12 @@ namespace AssignmentApp
             g.DrawImageUnscaled(OutputBitmap, 0, 0);
         }
 
-        private void outputCanvas_Click(object sender, EventArgs e)
+        private void outputCanvas_MouseDown(object sender, MouseEventArgs e)
         {
-            Point point = new Point();
-            int xPos = 0;
-            int yPos = 0;
-            point.X = xPos;
-            point.Y = yPos;
+            cursorX = e.X;
+            cursorY = e.Y;
+            Canvas.SetCursorPos(cursorX, cursorY);
+            
         }
     }
 }
