@@ -12,6 +12,7 @@ namespace AssignmentApp
         Graphics g;
         Pen Pen;
         int cursorX, cursorY;
+        int cursorUpX, cursorUpY;
 
         public Canvas(Graphics g)
         {
@@ -25,24 +26,26 @@ namespace AssignmentApp
             this.cursorX = cursorX;
             this.cursorY = cursorY;
         }
-        public void DrawLine(int toX, int toY)
+        public void SetSecondCursorPos(int cursorUpX, int cursorUpY)
         {
-            //drawing the line using the current pen, x and y positions to the given x and y positions
-            g.DrawLine(Pen, cursorX, cursorY, toX, toY);
-
-            // once the drawing has been completed, the new x and y positions will be updated
-            cursorX = toX;
-            cursorY = toY;
+            this.cursorUpX = cursorUpX;
+            this.cursorUpY = cursorUpY;
         }
 
-        public void DrawSquare(int size)
+        public void DrawLine()
         {
-            g.DrawRectangle(Pen, cursorX, cursorY, cursorX + size, cursorY + size);
+            //drawing the line using the current pen, x and y positions to the given x and y positions
+            g.DrawLine(Pen, cursorX, cursorY, cursorUpX, cursorUpY);
+       }
+
+        public void DrawSquare(int length)
+        {
+            g.DrawRectangle(Pen, cursorX, cursorY, length, length);
         }
 
         public void DrawCircle(int radius)
         {
-           
+           g.DrawEllipse(Pen, cursorX, cursorY, radius, radius);
         }
     }
 }
