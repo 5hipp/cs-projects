@@ -1,0 +1,17 @@
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.csproj.AssemblyReference.cache
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.Form1.resources
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.csproj.GenerateResource.cache
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.AssemblyInfoInputs.cache
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.AssemblyInfo.cs
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.csproj.CoreCompileInputs.cache
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\bin\Debug\net6.0-windows\PaintingProg.exe
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\bin\Debug\net6.0-windows\PaintingProg.deps.json
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\bin\Debug\net6.0-windows\PaintingProg.runtimeconfig.json
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\bin\Debug\net6.0-windows\PaintingProg.dll
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\bin\Debug\net6.0-windows\PaintingProg.pdb
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.dll
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\refint\PaintingProg.dll
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.pdb
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\PaintingProg.genruntimeconfig.cache
+C:\Users\joesi\source\repos\Uni Work\Week 4\PaintingProg\obj\Debug\net6.0-windows\ref\PaintingProg.dll
