@@ -51,7 +51,11 @@ namespace AssignmentApp
 
         private void outputCanvas_Click(object sender, EventArgs e)
         {
-
+            Point point = new Point();
+            int xPos = 0;
+            int yPos = 0;
+            point.X = xPos;
+            point.Y = yPos;
         }
     }
 }
