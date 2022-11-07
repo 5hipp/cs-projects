@@ -21,6 +21,11 @@ namespace AssignmentApp
             Pen = new Pen(Color.White,1);
         }
 
+        public void Clear()
+        {
+            g.Clear(Color.Silver);
+        }
+
         public void SetCursorPos(int cursorX, int cursorY)
         {
             this.cursorX = cursorX;
@@ -47,5 +52,6 @@ namespace AssignmentApp
         {
            g.DrawEllipse(Pen, cursorX, cursorY, radius, radius);
         }
+
     }
 }

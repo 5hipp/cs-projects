@@ -18,8 +18,33 @@ namespace AssignmentApp
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+
+            String[] commandLine = inputTextBox.Text.Split('\n');
+
+            outputLog.Text = "Log: Words in array " + commandLine[0] + " + " + commandLine[1] + " + " + commandLine[2];
+            /// make a loop that takes the first item from the array, checks it against list of commands
+            /// if the command matches it then splits the value from that item in the array and draws based from the command
+
+            for (int i = 0; i < commandLine.Length; i++)
+            {
+                String[] individualCommmand = commandLine[i].Split(' ');
+
+                if (individualCommmand[i].ToLower() == "line")
+                {
+                    Canvas.DrawLine();
+                } else if (individualCommmand[i].ToLower() == "square")
+                {
+                    Canvas.DrawSquare(100);
+                } else if (individualCommmand[i].ToLower() == "circle")
+                {
+                    Canvas.DrawCircle(100);
+                }
+            }
+
             
-        }
+     
+
+        }  
 
         private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
         {
@@ -57,7 +82,7 @@ namespace AssignmentApp
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            
+            Canvas.Clear();
         }
 
         private void outputCanvas_Paint(object sender, PaintEventArgs e)
