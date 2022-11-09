@@ -18,7 +18,7 @@ namespace AssignmentApp
         {
             this.g = g;
 
-            Pen = new Pen(Color.White,1);
+            Pen = new Pen(Color.White, 1);
         }
 
         public void Clear()
@@ -41,7 +41,7 @@ namespace AssignmentApp
         {
             //drawing the line using the current pen, x and y positions to the given x and y positions
             g.DrawLine(Pen, cursorX, cursorY, cursorUpX, cursorUpY);
-       }
+        }
 
         public void DrawSquare(int length)
         {
@@ -50,7 +50,7 @@ namespace AssignmentApp
 
         public void DrawCircle(int radius)
         {
-           g.DrawEllipse(Pen, cursorX, cursorY, radius, radius);
+            g.DrawEllipse(Pen, cursorX, cursorY, radius, radius);
         }
 
     }

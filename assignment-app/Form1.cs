@@ -32,45 +32,50 @@ namespace AssignmentApp
                 if (individualCommmand[i].ToLower() == "line")
                 {
                     Canvas.DrawLine();
-                } else if (individualCommmand[i].ToLower() == "square")
+                }
+                else if (individualCommmand[i].ToLower() == "square")
                 {
-                    Canvas.DrawSquare(100);
-                } else if (individualCommmand[i].ToLower() == "circle")
+                    Canvas.DrawSquare(individualCommmand[i + 1]);
+                }
+                else if (individualCommmand[i].ToLower() == "circle")
                 {
-                    Canvas.DrawCircle(100);
+                    Canvas.DrawCircle(individualCommmand[i + 1]);
                 }
             }
 
-            
-     
-
-        }  
+        }
 
         private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) 
+            if (e.KeyCode == Keys.Enter)
             {
                 String[] commandInputs = commandLineInput.Text.Split(' ');
 
                 if (commandInputs[0].Equals("line") == true)
                 {
                     Canvas.DrawLine();
-                  
-                } else if (commandInputs[0].Equals("square") == true) {
+
+                }
+                else if (commandInputs[0].Equals("square") == true)
+                {
                     try
                     {
                         int x = Int32.Parse(commandInputs[1]);
                         Canvas.DrawSquare(x);
-                    } catch 
+                    }
+                    catch
                     {
                         MessageBox.Show("You must input a size!");
                     }
-                } else if (commandInputs[0].Equals("circle") == true) {
+                }
+                else if (commandInputs[0].Equals("circle") == true)
+                {
                     try
                     {
                         int x = Int32.Parse(commandInputs[1]);
                         Canvas.DrawCircle(x);
-                    } catch
+                    }
+                    catch
                     {
                         MessageBox.Show("You must input a radius!");
                     }
