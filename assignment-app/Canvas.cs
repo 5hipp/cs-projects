@@ -10,9 +10,8 @@ namespace AssignmentApp
     internal class Canvas
     {
         Graphics g;
-        Pen Pen;
-        int cursorX, cursorY;
-        int cursorUpX, cursorUpY;
+        Pen Pen, cursorPen;
+        float cursorX, cursorY;
 
         public Canvas(Graphics g)
         {
@@ -21,36 +20,43 @@ namespace AssignmentApp
             Pen = new Pen(Color.White,1);
         }
 
+        public Canvas() { }
+
         public void Clear()
         {
+            
             g.Clear(Color.Silver);
         }
 
-        public void SetCursorPos(int cursorX, int cursorY)
-        {
-            this.cursorX = cursorX;
-            this.cursorY = cursorY;
-        }
-        public void SetSecondCursorPos(int cursorUpX, int cursorUpY)
-        {
-            this.cursorUpX = cursorUpX;
-            this.cursorUpY = cursorUpY;
-        }
-
-        public void DrawLine()
+        public void DrawLine(int x, int y)
         {
             //drawing the line using the current pen, x and y positions to the given x and y positions
-            g.DrawLine(Pen, cursorX, cursorY, cursorUpX, cursorUpY);
+            g.DrawLine(Pen, cursorX, cursorY, x, y);
+            this.cursorX = x;
+            this.cursorY = y;
        }
 
-        public void DrawSquare(int length)
+        public void DrawSquare(float length)
         {
-            g.DrawRectangle(Pen, cursorX, cursorY, length, length);
+            g.DrawRectangle(Pen, cursorX - length/2, cursorY - length/2, length, length);
         }
 
-        public void DrawCircle(int radius)
+        public void DrawCircle(float radius)
         {
-           g.DrawEllipse(Pen, cursorX, cursorY, radius, radius);
+           g.DrawEllipse(Pen, cursorX -radius/2, cursorY - radius/2, radius, radius);
+        }
+
+        public void DrawTriangle()
+        {
+           /// g.DrawPolygon(Pen, cursorX, cursorX+10);
+        }
+
+        public void MoveCursor(int x, int y)
+        {
+            cursorPen = new Pen(Color.Red, 5);
+            this.cursorX = x;
+            this.cursorY = y;
+            g.DrawEllipse(Pen, x-5, y-5, 10, 10);
         }
 
     }

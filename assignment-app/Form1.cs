@@ -7,56 +7,31 @@ namespace AssignmentApp
     {
         Canvas Canvas;
         Bitmap OutputBitmap = new Bitmap(640, 480);
-        int cursorX, cursorY = -1;
-        int cursorUpX, cursorUpY = -1;
 
         public Form1()
         {
             InitializeComponent();
             Canvas = new Canvas(Graphics.FromImage(OutputBitmap));
+            Canvas.MoveCursor(0, 0);
         }
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            Parser.Parse(inputTextBox.Text);
+            Refresh();
+        }
 
-            String[] commandLine = inputTextBox.Text.Split('\n');
-
-            outputLog.Text = "Log: Words in array " + commandLine[0] + " + " + commandLine[1] + " + " + commandLine[2];
-            /// make a loop that takes the first item from the array, checks it against list of commands
-            /// if the command matches it then splits the value from that item in the array and draws based from the command
-
-            for (int i = 0; i < commandLine.Length; i++)
-            {
-                String[] individualCommmand = commandLine[i].Split(' ');
-
-                if (individualCommmand[i].ToLower() == "line")
-                {
-                    Canvas.DrawLine();
-                } else if (individualCommmand[i].ToLower() == "square")
-                {
-                    Canvas.DrawSquare(100);
-                } else if (individualCommmand[i].ToLower() == "circle")
-                {
-                    Canvas.DrawCircle(100);
-                }
-            }
-
-            
-     
-
-        }  
-
-        private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
+        /*private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) 
             {
                 String[] commandInputs = commandLineInput.Text.Split(' ');
 
-                if (commandInputs[0].Equals("line") == true)
+                if (commandInputs[0].Trim().ToLower().Equals("lineto") == true)
                 {
-                    Canvas.DrawLine();
+                    Canvas.DrawLine(int.Parse(commandInputs[1]), int.Parse(commandInputs[2]));
                   
-                } else if (commandInputs[0].Equals("square") == true) {
+                } else if (commandInputs[0].Trim().ToLower().Equals("square") == true) {
                     try
                     {
                         int x = Int32.Parse(commandInputs[1]);
@@ -65,7 +40,7 @@ namespace AssignmentApp
                     {
                         MessageBox.Show("You must input a size!");
                     }
-                } else if (commandInputs[0].Equals("circle") == true) {
+                } else if (commandInputs[0].Trim().ToLower().Equals("circle") == true) {
                     try
                     {
                         int x = Int32.Parse(commandInputs[1]);
@@ -74,15 +49,38 @@ namespace AssignmentApp
                     {
                         MessageBox.Show("You must input a radius!");
                     }
+                } else if (commandInputs[0].Trim().ToLower().Equals("moveto") == true)
+                {
+                    try
+                    {
+                        Canvas.MoveCursor(int.Parse(commandInputs[1]), int.Parse(commandInputs[2]));
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("You must input a value!");
+                    }
+                    Refresh();
                 }
                 commandLineInput.Text = "";
                 Refresh();
             }
-        }
+        }*/
 
+        private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Parser.Parse(commandLineInput.Text);
+                Refresh();
+            }
+
+        }
+        
         private void clearButton_Click(object sender, EventArgs e)
         {
             Canvas.Clear();
+            Refresh();
         }
 
         private void outputCanvas_Paint(object sender, PaintEventArgs e)
@@ -91,20 +89,5 @@ namespace AssignmentApp
             g.DrawImageUnscaled(OutputBitmap, 0, 0);
         }
 
-        private void outputCanvas_MouseDown(object sender, MouseEventArgs e)
-        {
-            cursorX = e.X;
-            cursorY = e.Y;
-            Canvas.SetCursorPos(cursorX, cursorY);
-            outputLog.Text = "Log: Cursor position set to X:" + cursorX + " Y:" + cursorY;
-        }
-
-        private void outputCanvas_MouseUp(object sender, MouseEventArgs e)
-        {
-            cursorUpX = e.X;
-            cursorUpY = e.Y;
-            Canvas.SetSecondCursorPos(cursorUpX, cursorUpY);
-            outputLog.Text = "Log: Second Cursor position set to X:" + cursorUpX + " Y:" + cursorUpY;
-        }
     }
 }
