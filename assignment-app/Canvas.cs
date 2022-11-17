@@ -28,12 +28,20 @@ namespace AssignmentApp
             g.Clear(Color.Silver);
         }
 
-        public void DrawLine(int x, int y)
+        public void MoveCursor(float x, float y)
+        {
+            g.DrawEllipse(Pen, x/2, y/2, x, y);
+            this.cursorX = x;
+            this.cursorY = y;
+
+        }
+
+        public void DrawLine(float x, float y)
         {
             g.DrawLine(Pen, cursorX, cursorY, x, y);
             this.cursorX = x;
             this.cursorY = y;
-       }
+        }
 
         public void DrawSquare(float length)
         {
@@ -43,27 +51,6 @@ namespace AssignmentApp
         public void DrawCircle(float radius)
         {
            g.DrawEllipse(Pen, cursorX -radius/2, cursorY - radius/2, radius, radius);
-        }
-
-<<<<<<< Updated upstream
-        public void DrawTriangle()
-=======
-        public void DrawSquare(float length)
->>>>>>> Stashed changes
-        {
-           /// g.DrawPolygon(Pen, cursorX, cursorX+10);
-        }
-
-<<<<<<< Updated upstream
-        public void MoveCursor(int x, int y)
-=======
-        public void DrawCircle(float radius)
->>>>>>> Stashed changes
-        {
-            cursorPen = new Pen(Color.Red, 5);
-            this.cursorX = x;
-            this.cursorY = y;
-            g.DrawEllipse(Pen, x-5, y-5, 10, 10);
         }
 
     }

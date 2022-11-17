@@ -11,23 +11,24 @@ namespace AssignmentApp
 {
     public class Parser
     {
-        Canvas canvas = new Canvas();
-        public Parser()
+        Canvas canvas;
+        public Parser(Canvas canvas)
         {
-
+            this.canvas = canvas;
         }
-
 
         public void Parse(string text)
         {
-            String[] commandLine = text.Split(" ");
+            
+            canvas.DrawLine(100, 100);
+            /*String[] commandLine = text.Split("\n");
             string command;
             int[] parametersInt = { 0, 0, 0, 0 };
 
             if (commandLine.Length > 0)
             {
                 command = commandLine[0];
-                string[] parameters = commandLine[1].Split(",");
+                string[] parameters = commandLine[0].Split(" ");
                 for (int i = 0; i < parameters.Length; i++)
                 {
                     parametersInt[i] = int.Parse(parameters[i]);
@@ -37,12 +38,7 @@ namespace AssignmentApp
             {
                 command = commandLine[0];
                 int parameter = int.Parse(commandLine[1]);
-            }
-
-            if (command.Equals("moveto") == true)
-            {
-                canvas.DrawLine(parametersInt[0], parametersInt[1]);
-            } 
+            } */
         }
 
     }
