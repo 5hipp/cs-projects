@@ -1,35 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Schema;
 
 namespace AssignmentApp
 {
-    public class Canvas
+    internal class Canvas
     {
         Graphics g;
-        public Bitmap outputBitmap = new Bitmap(640, 480);
         Pen Pen, cursorPen;
-        float cursorX, cursorY = 0;
+        float cursorX, cursorY;
 
-        public Canvas()
+        public Canvas(Graphics g)
         {
-            this.g = Graphics.FromImage(outputBitmap);
-            Pen = new Pen(Color.White, 1);
-            cursorPen = new Pen(Color.Red, 5);
+            this.g = g;
+
+            Pen = new Pen(Color.White,1);
         }
 
+        public Canvas() { }
+
         public void Clear()
-        { 
+        {
+            
             g.Clear(Color.Silver);
         }
 
         public void DrawLine(int x, int y)
         {
+            //drawing the line using the current pen, x and y positions to the given x and y positions
             g.DrawLine(Pen, cursorX, cursorY, x, y);
             this.cursorX = x;
             this.cursorY = y;

@@ -9,20 +9,22 @@ using System.Windows.Forms.VisualStyles;
 
 namespace AssignmentApp
 {
-    public class Parser
+    internal class Parser
     {
-        Canvas canvas = new Canvas();
-        public Parser()
+        internal static string Parse(string text)
         {
+<<<<<<< HEAD
 
         }
 
 
         public void Parse(string text)
         {
+=======
+>>>>>>> parent of b5aa1ce (further implementation of parser)
             String[] commandLine = text.Split(" ");
             string command;
-            int[] parametersInt = { 0, 0, 0, 0 };
+            int[] parametersInt = {0,0,0,0};
 
             if (commandLine.Length > 0)
             {
@@ -32,18 +34,24 @@ namespace AssignmentApp
                 {
                     parametersInt[i] = int.Parse(parameters[i]);
                 }
-            }
-            else
+            } else
             {
                 command = commandLine[0];
                 int parameter = int.Parse(commandLine[1]);
             }
 
-            if (command.Equals("moveto") == true)
+            if (command.Equals("moveto")==true)
             {
+<<<<<<< HEAD
                 canvas.DrawLine(parametersInt[0], parametersInt[1]);
             } 
+=======
+                Canvas Canvas = new Canvas();
+                Canvas.MoveCursor(parametersInt[0], parametersInt[1]);
+            }
+            
+            return text;
+>>>>>>> parent of b5aa1ce (further implementation of parser)
         }
-
     }
 }
