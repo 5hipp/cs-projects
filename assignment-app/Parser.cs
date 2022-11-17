@@ -9,49 +9,83 @@ using System.Windows.Forms.VisualStyles;
 
 namespace AssignmentApp
 {
-    internal class Parser
+    public class Parser
     {
-        internal static string Parse(string text)
+        Canvas canvas;
+        public Parser(Canvas canvas)
         {
-<<<<<<< HEAD
-
+            this.canvas = canvas;
         }
-
 
         public void Parse(string text)
         {
-=======
->>>>>>> parent of b5aa1ce (further implementation of parser)
-            String[] commandLine = text.Split(" ");
-            string command;
-            int[] parametersInt = {0,0,0,0};
-
-            if (commandLine.Length > 0)
-            {
-                command = commandLine[0];
-                string[] parameters = commandLine[1].Split(",");
-                for (int i = 0; i < parameters.Length; i++)
-                {
-                    parametersInt[i] = int.Parse(parameters[i]);
-                }
-            } else
-            {
-                command = commandLine[0];
-                int parameter = int.Parse(commandLine[1]);
-            }
-
-            if (command.Equals("moveto")==true)
-            {
-<<<<<<< HEAD
-                canvas.DrawLine(parametersInt[0], parametersInt[1]);
-            } 
-=======
-                Canvas Canvas = new Canvas();
-                Canvas.MoveCursor(parametersInt[0], parametersInt[1]);
-            }
             
-            return text;
->>>>>>> parent of b5aa1ce (further implementation of parser)
+            String[] commandLine = text.Split("\n");
+            String[] wholeCommand;
+            String command;
+            int x, y;
+
+            if (commandLine.Length > 1)
+            {
+                for (int i = 0; i < commandLine.Length; i++)
+                {
+                    wholeCommand = commandLine[i].Split(' ');
+                    command = wholeCommand[0];
+                    x = int.Parse(wholeCommand[1]);
+                    y = int.Parse(wholeCommand[2]);
+
+                    if (command.Equals("line"))
+                    {      
+                        
+                        canvas.DrawLine(x, y);
+
+                    } else if (command.Equals("circle"))
+                    {
+
+                        canvas.DrawCircle(x);
+
+                    } else if (command.Equals("square"))
+                    {
+
+                        canvas.DrawSquare(x);
+
+                    } else if (command.Equals("moveto"))
+                    {
+                        canvas.MoveCursor(x, y);
+                    }
+                }
+
+            } else if (commandLine.Length == 1)
+            {
+                command = commandLine[0];
+                x = Int32.Parse(commandLine[1]);
+                y = Int32.Parse(commandLine[2]);
+
+                if (command.Equals("line"))
+                {
+
+                    canvas.DrawLine(x, y);
+
+                }
+                else if (command.Equals("circle"))
+                {
+
+                    canvas.DrawCircle(x);
+
+                }
+                else if (command.Equals("square"))
+                {
+
+                    canvas.DrawSquare(x);
+
+                }
+                else if (command.Equals("moveto"))
+                {
+                    canvas.MoveCursor(x, y);
+                }
+            }
+
         }
+
     }
 }

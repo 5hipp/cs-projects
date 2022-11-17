@@ -1,40 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Schema;
 
 namespace AssignmentApp
 {
-    internal class Canvas
+    public class Canvas
     {
         Graphics g;
+        public Bitmap outputBitmap = new Bitmap(640, 480);
         Pen Pen, cursorPen;
-        float cursorX, cursorY;
+        float cursorX, cursorY = 0;
 
-        public Canvas(Graphics g)
+        public Canvas()
         {
-            this.g = g;
-
-            Pen = new Pen(Color.White,1);
+            this.g = Graphics.FromImage(outputBitmap);
+            Pen = new Pen(Color.White, 1);
+            cursorPen = new Pen(Color.Red, 5);
         }
 
-        public Canvas() { }
-
         public void Clear()
-        {
-            
+        { 
             g.Clear(Color.Silver);
         }
 
-        public void DrawLine(int x, int y)
+        public void MoveCursor(float x, float y)
         {
-            //drawing the line using the current pen, x and y positions to the given x and y positions
+            g.DrawEllipse(Pen, x/2, y/2, x, y);
+            this.cursorX = x;
+            this.cursorY = y;
+
+        }
+
+        public void DrawLine(float x, float y)
+        {
             g.DrawLine(Pen, cursorX, cursorY, x, y);
             this.cursorX = x;
             this.cursorY = y;
-       }
+        }
 
         public void DrawSquare(float length)
         {
@@ -44,27 +51,6 @@ namespace AssignmentApp
         public void DrawCircle(float radius)
         {
            g.DrawEllipse(Pen, cursorX -radius/2, cursorY - radius/2, radius, radius);
-        }
-
-<<<<<<< Updated upstream
-        public void DrawTriangle()
-=======
-        public void DrawSquare(float length)
->>>>>>> Stashed changes
-        {
-           /// g.DrawPolygon(Pen, cursorX, cursorX+10);
-        }
-
-<<<<<<< Updated upstream
-        public void MoveCursor(int x, int y)
-=======
-        public void DrawCircle(float radius)
->>>>>>> Stashed changes
-        {
-            cursorPen = new Pen(Color.Red, 5);
-            this.cursorX = x;
-            this.cursorY = y;
-            g.DrawEllipse(Pen, x-5, y-5, 10, 10);
         }
 
     }
