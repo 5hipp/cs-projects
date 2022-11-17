@@ -45,12 +45,20 @@ namespace AssignmentApp
            g.DrawEllipse(Pen, cursorX -radius/2, cursorY - radius/2, radius, radius);
         }
 
+<<<<<<< Updated upstream
         public void DrawTriangle()
+=======
+        public void DrawSquare(float length)
+>>>>>>> Stashed changes
         {
            /// g.DrawPolygon(Pen, cursorX, cursorX+10);
         }
 
+<<<<<<< Updated upstream
         public void MoveCursor(int x, int y)
+=======
+        public void DrawCircle(float radius)
+>>>>>>> Stashed changes
         {
             cursorPen = new Pen(Color.Red, 5);
             this.cursorX = x;
