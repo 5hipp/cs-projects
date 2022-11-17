@@ -11,6 +11,7 @@ namespace AssignmentApp
 {
     public class Canvas
     {
+
         Graphics g;
         public Bitmap outputBitmap = new Bitmap(640, 480);
         Pen Pen, cursorPen;
@@ -28,15 +29,15 @@ namespace AssignmentApp
             g.Clear(Color.Silver);
         }
 
-        public void MoveCursor(float x, float y)
+        public void MoveCursor(int x, int y)
         {
-            g.DrawEllipse(Pen, x/2, y/2, x, y);
+            g.DrawEllipse(Pen, x, y, 2, 2);
             this.cursorX = x;
             this.cursorY = y;
 
         }
 
-        public void DrawLine(float x, float y)
+        public void DrawLine(int x, int y)
         {
             g.DrawLine(Pen, cursorX, cursorY, x, y);
             this.cursorX = x;

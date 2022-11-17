@@ -31,26 +31,30 @@ namespace AssignmentApp
                 {
                     wholeCommand = commandLine[i].Split(' ');
                     command = wholeCommand[0];
-                    x = int.Parse(wholeCommand[1]);
-                    y = int.Parse(wholeCommand[2]);
+
 
                     if (command.Equals("line"))
-                    {      
-                        
+                    {
+                        x = int.Parse(wholeCommand[1]);
+                        y = int.Parse(wholeCommand[2]);
                         canvas.DrawLine(x, y);
 
                     } else if (command.Equals("circle"))
                     {
+                        x = int.Parse(wholeCommand[1]);
 
                         canvas.DrawCircle(x);
 
                     } else if (command.Equals("square"))
                     {
+                        x = int.Parse(wholeCommand[1]);
 
                         canvas.DrawSquare(x);
 
                     } else if (command.Equals("moveto"))
                     {
+                        x = int.Parse(wholeCommand[1]);
+                        y = int.Parse(wholeCommand[2]);
                         canvas.MoveCursor(x, y);
                     }
                 }
@@ -58,29 +62,33 @@ namespace AssignmentApp
             } else if (commandLine.Length == 1)
             {
                 command = commandLine[0];
-                x = Int32.Parse(commandLine[1]);
-                y = Int32.Parse(commandLine[2]);
+
 
                 if (command.Equals("line"))
                 {
-
+                    x = Int32.Parse(commandLine[1]);
+                    y = Int32.Parse(commandLine[2]);
                     canvas.DrawLine(x, y);
 
                 }
                 else if (command.Equals("circle"))
                 {
+                    x = Int32.Parse(commandLine[1]);
 
                     canvas.DrawCircle(x);
 
                 }
                 else if (command.Equals("square"))
                 {
+                    x = Int32.Parse(commandLine[1]);
 
                     canvas.DrawSquare(x);
 
                 }
                 else if (command.Equals("moveto"))
                 {
+                    x = Int32.Parse(commandLine[1]);
+                    y = Int32.Parse(commandLine[2]);
                     canvas.MoveCursor(x, y);
                 }
             }
