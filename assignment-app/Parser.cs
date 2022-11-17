@@ -17,10 +17,10 @@ namespace AssignmentApp
 
         }
 
-        public void Parse()
+
+        public void Parse(string text)
         {
-            canvas.DrawLine(100, 100);
-          /*  String[] commandLine = text.Split(" ");
+            String[] commandLine = text.Split(" ");
             string command;
             int[] parametersInt = { 0, 0, 0, 0 };
 
@@ -42,7 +42,7 @@ namespace AssignmentApp
             if (command.Equals("moveto") == true)
             {
                 canvas.DrawLine(parametersInt[0], parametersInt[1]);
-            } */
+            } 
         }
 
     }
