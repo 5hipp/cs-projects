@@ -36,6 +36,7 @@
             this.outputLog = new System.Windows.Forms.RichTextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
+            this.syntaxCheckButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.outputCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.submitButton.Location = new System.Drawing.Point(12, 382);
             this.submitButton.Margin = new System.Windows.Forms.Padding(6);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(112, 43);
+            this.submitButton.Size = new System.Drawing.Size(78, 43);
             this.submitButton.TabIndex = 2;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -64,7 +65,7 @@
             this.clearButton.Location = new System.Drawing.Point(397, 382);
             this.clearButton.Margin = new System.Windows.Forms.Padding(6);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(117, 43);
+            this.clearButton.Size = new System.Drawing.Size(83, 43);
             this.clearButton.TabIndex = 4;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -72,6 +73,7 @@
             // 
             // commandLineInput
             // 
+            this.commandLineInput.AcceptsReturn = true;
             this.commandLineInput.Location = new System.Drawing.Point(12, 353);
             this.commandLineInput.Margin = new System.Windows.Forms.Padding(6);
             this.commandLineInput.Name = "commandLineInput";
@@ -95,19 +97,19 @@
             // outputLog
             // 
             this.outputLog.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.outputLog.Location = new System.Drawing.Point(130, 382);
+            this.outputLog.Location = new System.Drawing.Point(186, 382);
             this.outputLog.Margin = new System.Windows.Forms.Padding(6);
             this.outputLog.Name = "outputLog";
             this.outputLog.ReadOnly = true;
-            this.outputLog.Size = new System.Drawing.Size(261, 43);
+            this.outputLog.Size = new System.Drawing.Size(205, 43);
             this.outputLog.TabIndex = 3;
             this.outputLog.Text = "";
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(520, 382);
+            this.saveButton.Location = new System.Drawing.Point(604, 382);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(132, 43);
+            this.saveButton.Size = new System.Drawing.Size(84, 43);
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -115,19 +117,30 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(658, 382);
+            this.loadButton.Location = new System.Drawing.Point(694, 382);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(120, 43);
+            this.loadButton.Size = new System.Drawing.Size(84, 43);
             this.loadButton.TabIndex = 9;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = true;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
+            // syntaxCheckButton
+            // 
+            this.syntaxCheckButton.Location = new System.Drawing.Point(99, 382);
+            this.syntaxCheckButton.Name = "syntaxCheckButton";
+            this.syntaxCheckButton.Size = new System.Drawing.Size(78, 43);
+            this.syntaxCheckButton.TabIndex = 10;
+            this.syntaxCheckButton.Text = "Check";
+            this.syntaxCheckButton.UseVisualStyleBackColor = true;
+            this.syntaxCheckButton.Click += new System.EventHandler(this.syntaxCheckButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 437);
+            this.Controls.Add(this.syntaxCheckButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.outputLog);
@@ -154,5 +167,6 @@
         private RichTextBox outputLog;
         private Button saveButton;
         private Button loadButton;
+        private Button syntaxCheckButton;
     }
 }

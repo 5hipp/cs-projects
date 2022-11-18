@@ -14,14 +14,15 @@ namespace AssignmentApp
 
         Graphics g;
         public Bitmap outputBitmap = new Bitmap(640, 480);
-        Pen Pen, cursorPen;
+        Pen Pen, cursorPen, Eraser;
         float cursorX, cursorY = 0;
 
         public Canvas()
         {
             this.g = Graphics.FromImage(outputBitmap);
             Pen = new Pen(Color.White, 1);
-            cursorPen = new Pen(Color.Red, 5);
+            cursorPen = new Pen(Color.Red, 1);
+            Eraser = new Pen(Color.Silver, 1);
         }
 
         public void Clear()
@@ -31,7 +32,8 @@ namespace AssignmentApp
 
         public void MoveCursor(int x, int y)
         {
-            g.DrawEllipse(Pen, x, y, 2, 2);
+            g.DrawEllipse(Eraser, cursorX, cursorY, 2, 2);
+            g.DrawEllipse(cursorPen, x, y, 2, 2);
             this.cursorX = x;
             this.cursorY = y;
 

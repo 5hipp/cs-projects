@@ -19,21 +19,38 @@ namespace AssignmentApp
             FormCanvas.MoveCursor(2, 2);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void submitButton_Click(object sender, EventArgs e)
         {
-            FormParser.Parse(inputTextBox.Text);
+            if (FormParser.CheckSyntax(inputTextBox.Text).Equals(false))
+            {
+                outputLog.Text = "You must correct syntax errors before continuing";
+            } else {
+                 FormParser.Parse(inputTextBox.Text);
+                outputLog.Text = "";
+            }
+  
             Refresh();
         }  
 
         private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode != Keys.Enter)
+            {
+                return;
+            }
 
+            FormParser.Parse(commandLineInput.Text);
+            Refresh();
+
+            if (commandLineInput.Text.Trim().ToLower().Equals("run"))
+            {
+                FormParser.Parse(inputTextBox.Text);
+                Refresh();            
+                commandLineInput.Text = "";
+            }
+
+            e.Handled = true;
+            e.SuppressKeyPress = true;
         }
         
         private void clearButton_Click(object sender, EventArgs e)
@@ -60,7 +77,23 @@ namespace AssignmentApp
 
         private void loadButton_Click(object sender, EventArgs e)
         {
+            FormSaveLoad.Load(inputTextBox.Text);
+        }
 
+        private void syntaxCheckButton_Click(object sender, EventArgs e)
+        {
+            bool x;
+            x = FormParser.CheckSyntax(inputTextBox.Text);
+
+            if (x.Equals(true))
+            {
+                outputLog.Text = "Correct";
+
+            } else if (x.Equals(false))
+            {
+                outputLog.Text = "Incorrect";
+
+            }
         }
     }
 }

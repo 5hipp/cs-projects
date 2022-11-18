@@ -45,6 +45,10 @@ namespace AssignmentApp
             }
         }
 
+        public void Load(string text)
+        {
+
+        }
     }
       
 }
