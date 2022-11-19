@@ -108,6 +108,7 @@ namespace AssignmentApp
                     catch
                     {
                         MessageBox.Show("Your parameters must contain numbers only!");
+                        throw new FormatException("Incorrect Parameter");
                     }
 
                     

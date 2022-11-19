@@ -17,6 +17,7 @@ namespace AssignmentApp
             this.FormParser = new Parser(FormCanvas);
             InitializeComponent();
             FormCanvas.MoveCursor(2, 2);
+
         }
 
         private void submitButton_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace AssignmentApp
 
             FormParser.Parse(commandLineInput.Text);
             Refresh();
+            commandLineInput.Text = "";
 
             if (commandLineInput.Text.Trim().ToLower().Equals("run"))
             {
@@ -89,7 +91,8 @@ namespace AssignmentApp
             {
                 outputLog.Text = "Correct";
 
-            } else if (x.Equals(false))
+            }
+            else if (x.Equals(false))
             {
                 outputLog.Text = "Incorrect";
 

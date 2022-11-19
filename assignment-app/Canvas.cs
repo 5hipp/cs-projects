@@ -15,7 +15,7 @@ namespace AssignmentApp
         Graphics g;
         public Bitmap outputBitmap = new Bitmap(640, 480);
         Pen Pen, cursorPen, Eraser;
-        float cursorX, cursorY = 0;
+        public float cursorX, cursorY = 0;
 
         public Canvas()
         {
@@ -26,7 +26,7 @@ namespace AssignmentApp
         }
 
         public void Clear()
-        { 
+        {
             g.Clear(Color.Silver);
         }
 
@@ -36,7 +36,6 @@ namespace AssignmentApp
             g.DrawEllipse(cursorPen, x, y, 2, 2);
             this.cursorX = x;
             this.cursorY = y;
-
         }
 
         public void DrawLine(int x, int y)

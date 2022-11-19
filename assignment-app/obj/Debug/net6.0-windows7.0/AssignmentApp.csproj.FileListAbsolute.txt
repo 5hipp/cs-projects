@@ -1,0 +1,17 @@
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows7.0\AssignmentApp.exe
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows7.0\AssignmentApp.deps.json
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows7.0\AssignmentApp.runtimeconfig.json
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows7.0\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\bin\Debug\net6.0-windows7.0\AssignmentApp.pdb
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.csproj.AssemblyReference.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.Form1.resources
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.csproj.GenerateResource.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.AssemblyInfoInputs.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.AssemblyInfo.cs
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.csproj.CoreCompileInputs.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\refint\AssignmentApp.dll
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.pdb
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\AssignmentApp.genruntimeconfig.cache
+C:\Users\joesi\Documents\GitHub\cs-projects\assignment-app\obj\Debug\net6.0-windows7.0\ref\AssignmentApp.dll
