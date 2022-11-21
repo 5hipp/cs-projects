@@ -1,4 +1,5 @@
 using AssignmentApp;
+using System.Windows.Forms;
 
 namespace AssignmentTests
 {
@@ -31,9 +32,9 @@ namespace AssignmentTests
         }
 
         [TestMethod]
-        /// <summary>
-        /// checks to see if the drawTo command moved the cursor from the origin to the correct end point
-        /// </summary>
+
+        // checks to see if the drawTo command moved the cursor from the origin to the correct end point
+
         public void ParserTestDrawTo()
         {
             Canvas c = new Canvas();
@@ -50,15 +51,18 @@ namespace AssignmentTests
             Assert.AreEqual(100, c.cursorY);
         }
         [TestMethod]
+
+
+        //Checks that when invalid parameters are parsed, an exception is thrown
+
         public void ParserInvalidParameterTest() 
         {
             Canvas c = new Canvas();
             Parser p = new Parser(c);
 
-            String commands = "moveto !! !!";
+            String commands = "moveto ab ab";
 
             Assert.ThrowsException<FormatException>(() => p.Parse(commands));
-
         }
 
 

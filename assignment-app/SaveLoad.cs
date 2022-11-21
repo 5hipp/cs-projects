@@ -10,6 +10,7 @@ namespace AssignmentApp
     {
         public void Save(string text)
         {
+            // creates a windows save dialog with the predeinfed file name and type
             var SaveFileDialog = new SaveFileDialog
             {
                 FileName = "program.txt",
@@ -20,7 +21,7 @@ namespace AssignmentApp
             {
                 return;
             }
-
+            // writes to the file that is being saved the contents of the inputted text
             var writer = new StreamWriter(SaveFileDialog.OpenFile());
 
             WriteToFile(writer, text);
@@ -47,7 +48,7 @@ namespace AssignmentApp
 
         public void Load(string text)
         {
-
+            //TODO: not yet implemented.
         }
     }
       

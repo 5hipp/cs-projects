@@ -19,7 +19,7 @@ namespace AssignmentApp
             FormCanvas.MoveCursor(2, 2);
 
         }
-
+        // checks the input text has the correct syntax then parses
         private void submitButton_Click(object sender, EventArgs e)
         {
             if (FormParser.CheckSyntax(inputTextBox.Text).Equals(false))
@@ -33,6 +33,8 @@ namespace AssignmentApp
             Refresh();
         }  
 
+
+        // checks if the user has inputted run to execute the input box test, if not will parse the single command in the box as a regular command
         private void commandLineInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter)
@@ -42,7 +44,6 @@ namespace AssignmentApp
 
             FormParser.Parse(commandLineInput.Text);
             Refresh();
-            commandLineInput.Text = "";
 
             if (commandLineInput.Text.Trim().ToLower().Equals("run"))
             {
@@ -55,33 +56,39 @@ namespace AssignmentApp
             e.SuppressKeyPress = true;
         }
         
+        // clears the canvas
         private void clearButton_Click(object sender, EventArgs e)
         {
             FormCanvas.Clear();
             Refresh();
         }
 
+        // assigns the graphics to the canvas to allow for drawing
         private void outputCanvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             g.DrawImageUnscaled(FormCanvas.outputBitmap, 0, 0);
         }
 
+        // reports the current x and y coordinates of the mouse to the log box
         private void outputCanvas_MouseDown(object sender, MouseEventArgs e)
         {
             outputLog.Text = "Cursor X:" + e.X + "\nCursor Y:" + e.Y;
         }
 
+        //saves the current inputbox text to a file
         private void saveButton_Click(object sender, EventArgs e)
         {
             FormSaveLoad.Save(inputTextBox.Text);
         }
-
+        
+        //not yet implemented
         private void loadButton_Click(object sender, EventArgs e)
         {
             FormSaveLoad.Load(inputTextBox.Text);
         }
 
+        // checks the syntax of the inputbox text and reports to the log if correct or incorrect
         private void syntaxCheckButton_Click(object sender, EventArgs e)
         {
             bool x;
