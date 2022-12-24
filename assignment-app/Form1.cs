@@ -8,13 +8,17 @@ namespace AssignmentApp
     {
         Canvas FormCanvas;
         Parser FormParser;
+        SingleLineParser FormSingleLine;
         SaveLoad FormSaveLoad;
+        SyntaxChecker checkSyntax;
 
         public Form1()
         {
             this.FormSaveLoad = new SaveLoad();
             this.FormCanvas = new Canvas();
             this.FormParser = new Parser(FormCanvas);
+            this.FormSingleLine = new SingleLineParser(FormCanvas);
+            this.checkSyntax = new SyntaxChecker();
             InitializeComponent();
             FormCanvas.MoveCursor(2, 2);
 
@@ -22,9 +26,10 @@ namespace AssignmentApp
         // checks the input text has the correct syntax then parses
         private void submitButton_Click(object sender, EventArgs e)
         {
-            if (FormParser.CheckSyntax(inputTextBox.Text).Equals(false))
+            if (checkSyntax.CheckSyntax(inputTextBox.Text).Equals(false))
             {
                 outputLog.Text = "You must correct syntax errors before continuing";
+                // call messagebox creation for error log
             } else {
                  FormParser.Parse(inputTextBox.Text);
                 outputLog.Text = "";
@@ -42,7 +47,7 @@ namespace AssignmentApp
                 return;
             }
 
-            FormParser.Parse(commandLineInput.Text);
+            FormSingleLine.Parse(commandLineInput.Text);
             Refresh();
 
             if (commandLineInput.Text.Trim().ToLower().Equals("run"))
@@ -91,18 +96,20 @@ namespace AssignmentApp
         // checks the syntax of the inputbox text and reports to the log if correct or incorrect
         private void syntaxCheckButton_Click(object sender, EventArgs e)
         {
-            bool x;
-            x = FormParser.CheckSyntax(inputTextBox.Text);
 
-            if (x.Equals(true))
+            if (checkSyntax.CheckSyntax(inputTextBox.Text))
             {
-                outputLog.Text = "Correct";
+                outputLog.Text = "Syntax Correct";
 
             }
-            else if (x.Equals(false))
+            else if (checkSyntax.CheckSyntax(commandLineInput.Text))
             {
-                outputLog.Text = "Incorrect";
+                outputLog.Text = "Syntax Correct";
 
+            } else
+            {
+                outputLog.Text = "Syntax incorrect";
+                // call messagebox creation
             }
         }
     }
