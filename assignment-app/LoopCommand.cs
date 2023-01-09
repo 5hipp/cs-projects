@@ -19,6 +19,7 @@ namespace AssignmentApp
             {
                 currentLine = contentToLoop[i].Split(" ");
 
+                
 
             }
 

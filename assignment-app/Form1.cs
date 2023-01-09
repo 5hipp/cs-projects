@@ -8,7 +8,6 @@ namespace AssignmentApp
     {
         Canvas FormCanvas;
         Parser FormParser;
-        SingleLineParser FormSingleLine;
         SaveLoad FormSaveLoad;
         SyntaxChecker checkSyntax;
 
@@ -17,7 +16,6 @@ namespace AssignmentApp
             this.FormSaveLoad = new SaveLoad();
             this.FormCanvas = new Canvas();
             this.FormParser = new Parser(FormCanvas);
-            this.FormSingleLine = new SingleLineParser(FormCanvas);
             this.checkSyntax = new SyntaxChecker();
             InitializeComponent();
             FormCanvas.MoveCursor(2, 2);
@@ -47,7 +45,7 @@ namespace AssignmentApp
                 return;
             }
 
-            FormSingleLine.Parse(commandLineInput.Text);
+            FormParser.singleParse(commandLineInput.Text);
             Refresh();
 
             if (commandLineInput.Text.Trim().ToLower().Equals("run"))
