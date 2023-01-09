@@ -31,7 +31,7 @@ namespace AssignmentApp
         {  
             // splits the input by line
             String[] commandLine = text.ToLower().Split("\n");
-            String[] wholeCommand;
+            String[] wholeCommandArray;
             String command;
             int x, y;
 
@@ -42,39 +42,39 @@ namespace AssignmentApp
                     for (int i = 0; i < commandLine.Length; i++)
                     {
                         // splits by space and assigns to string
-                        wholeCommand = commandLine[i].Split(' ');
-                        command = wholeCommand[0];
+                        wholeCommandArray = commandLine[i].Split(' ');
+                        command = wholeCommandArray[0];
 
                         //trys the command against the pre defined commands and sends to canvas with parameters
                         try
                         {
                             if (command.Equals("drawto"))
                             {
-                                x = int.Parse(wholeCommand[1]);
-                                y = int.Parse(wholeCommand[2]);
+                                x = int.Parse(wholeCommandArray[1]);
+                                y = int.Parse(wholeCommandArray[2]);
 
                                 canvas.DrawLine(x, y);
 
                             }
                             else if (command.Equals("circle"))
                             {
-                                x = int.Parse(wholeCommand[1]);
+                                x = int.Parse(wholeCommandArray[1]);
 
                                 canvas.DrawCircle(x);
 
                             }
                             else if (command.Equals("rectangle"))
                             {
-                                x = int.Parse(wholeCommand[1]);
-                                y = int.Parse(wholeCommand[2]);
+                                x = int.Parse(wholeCommandArray[1]);
+                                y = int.Parse(wholeCommandArray[2]);
 
                                 canvas.DrawRect(x, y);
 
                             }
                             else if (command.Equals("moveto"))
                             {
-                                x = int.Parse(wholeCommand[1]);
-                                y = int.Parse(wholeCommand[2]);
+                                x = int.Parse(wholeCommandArray[1]);
+                                y = int.Parse(wholeCommandArray[2]);
                                 canvas.MoveCursor(x, y);
                             }
                             else if (command.Equals("reset"))
@@ -83,7 +83,7 @@ namespace AssignmentApp
                             }
                             else if (command.Equals("pen"))
                             {
-                                canvas.ChangePen(wholeCommand[1]);
+                                canvas.ChangePen(wholeCommandArray[1]);
                             }
                         }
                         // catches if the parameters inputted cannot be parsed to Int32, causing a FormatException
