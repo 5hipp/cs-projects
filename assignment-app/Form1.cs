@@ -24,14 +24,9 @@ namespace AssignmentApp
         // checks the input text has the correct syntax then parses
         private void submitButton_Click(object sender, EventArgs e)
         {
-            if (checkSyntax.CheckSyntax(inputTextBox.Text).Equals(false))
-            {
-                outputLog.Text = "You must correct syntax errors before continuing";
-                // call messagebox creation for error log
-            } else {
-                 FormParser.Parse(inputTextBox.Text);
-                outputLog.Text = "";
-            }
+
+            FormParser.Parse(inputTextBox.Text);
+
   
             Refresh();
         }  

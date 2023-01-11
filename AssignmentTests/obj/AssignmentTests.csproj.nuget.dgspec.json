@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj": {}
+    "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {
+    "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
+        "projectUniqueName": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
         "projectName": "AssignmentApp",
-        "projectPath": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
-        "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\obj\\",
+        "projectPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj",
+        "packagesPath": "C:\\Users\\joesi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,21 +58,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj": {
+    "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj",
+        "projectUniqueName": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj",
         "projectName": "AssignmentTests",
-        "projectPath": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj",
-        "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\AssignmentTests\\obj\\",
+        "projectPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\AssignmentTests\\AssignmentTests.csproj",
+        "packagesPath": "C:\\Users\\joesi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\AssignmentTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joesi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,8 +86,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {
-                "projectPath": "C:\\Users\\Joe\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj"
+              "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj": {
+                "projectPath": "C:\\Users\\joesi\\Documents\\GitHub\\cs-projects\\assignment-app\\AssignmentApp.csproj"
               }
             }
           }
@@ -139,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
         }
       }
     }
