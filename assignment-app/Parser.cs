@@ -15,9 +15,11 @@ namespace AssignmentApp
     {
         Canvas canvas;
         SyntaxChecker syntaxChecker;
+        ErrorFactory errorFactory;
         public Parser(Canvas canvas)
         {
             this.canvas = canvas;
+            this.errorFactory = new ErrorFactory();
             this.syntaxChecker = new SyntaxChecker();
         }
 
@@ -68,10 +70,11 @@ namespace AssignmentApp
                     //declaring the variable
                     if (command == "var")
                     {
-                        int found = checkVariables(command);
+                        int found = checkVariables(parameter);
                         if (found >= 0)
                         {
-                            //report syntax error variable already declared
+                            //errorFactory.ErrorHandle("variable already declared, please change the name of the duplicate variable.", "Syntax");
+                            canvas.Clear(); 
                         }
                         else
                         {
@@ -86,11 +89,19 @@ namespace AssignmentApp
                         if (found >= 0)
                         {
                             variableNames[found] = command;
-                            variableValues[found] = Int32.Parse(wholeCommandArray[2]);
+                            try
+                            {
+                                variableValues[found] = Int32.Parse(wholeCommandArray[2]);
+                            }
+                            catch(System.FormatException)
+                            {
+                                errorFactory.ErrorHandle("variable declared as string not integer, please change to an integer to continue", "Format");
+                            }
                         }
                         else
                         {
-                            //report syntax error variable not declared
+                           errorFactory.ErrorHandle("variable not declared, please declare the variable before continuing.", "Syntax");
+                           canvas.Clear();
                         }
                     }
 
@@ -181,16 +192,70 @@ namespace AssignmentApp
 
                     if (command == "rectangle")
                     {
-                        x = Int32.Parse(parameter);
-                        y = Int32.Parse(wholeCommandArray[2]);
-                        canvas.DrawRect(x, y);
+                        try
+                        {
+                            Int32.Parse(parameter);
+                            check = true;
+                        }
+                        catch
+                        {
+                            check = false;
+                        }
+
+                        if (check)
+                        {
+                            x = Int32.Parse(parameter);
+                            y = Int32.Parse(wholeCommandArray[2]);
+                            canvas.DrawRect(x, y);
+                        }
+                        else
+                        {
+                            int found = checkVariables(parameter);
+                            int found2 = checkVariables(wholeCommandArray[2]);
+                            if (found >= 0)
+                            {
+                                if (found2 >= 0)
+                                {
+                                    x = variableValues[found];
+                                    y = variableValues[found2];
+                                    canvas.DrawRect(x, y);
+                                }
+                            }
+                        }
                     }
 
                     if (command == "moveto")
                     {
-                        x = Int32.Parse(parameter);
-                        y = Int32.Parse(wholeCommandArray[2]);
-                        canvas.MoveCursor(x, y);
+                        try
+                        {
+                            Int32.Parse(parameter);
+                            check = true;
+                        }
+                        catch
+                        {
+                            check = false;
+                        }
+
+                        if (check)
+                        {
+                            x = Int32.Parse(parameter);
+                            y = Int32.Parse(wholeCommandArray[2]);
+                            canvas.MoveCursor(x, y);
+                        }
+                        else
+                        {
+                            int found = checkVariables(parameter);
+                            int found2 = checkVariables(wholeCommandArray[2]);
+                            if (found >= 0)
+                            {
+                                if (found2 >= 0)
+                                {
+                                    x = variableValues[found];
+                                    y = variableValues[found2];
+                                    canvas.MoveCursor(x, y);
+                                }
+                            }
+                        }
                     }
 
                     if (command == "reset")

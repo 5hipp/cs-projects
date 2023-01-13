@@ -19,7 +19,7 @@ namespace AssignmentApp
         {
             // splits the text by the new line
             String[] commandLine = text.ToLower().Split("\n");
-            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "drawto", "reset", "pen" };
+            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "drawto", "reset", "pen", "var",  };
             String[] wholeCommand;
             String command;
             bool check = false;
