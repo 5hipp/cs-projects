@@ -101,7 +101,7 @@ namespace AssignmentApp
 
             } else
             {
-                outputLog.Text = "Syntax incorrect";
+                outputLog.Text = "Syntax Incorrect";
                 // call messagebox creation
             }
         }

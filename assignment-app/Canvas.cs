@@ -13,7 +13,7 @@ namespace AssignmentApp
     {
         // Creation of bitmap and graphics variable, it is created here so that both the parser and form can reference the canvas commands.
         Graphics g;
-        public Bitmap outputBitmap = new Bitmap(640, 480);
+        public Bitmap outputBitmap = new Bitmap(640, 720);
         Pen Pen, cursorPen, Eraser;
         public float cursorX, cursorY = 0;
 
@@ -29,6 +29,7 @@ namespace AssignmentApp
         public void Clear()
         {
             g.Clear(Color.Silver);
+
         }
 
 
@@ -67,7 +68,6 @@ namespace AssignmentApp
         {
            g.DrawEllipse(Pen, cursorX -radius/2, cursorY - radius/2, radius, radius);
         }
-
 
         //changes the current in use pen colour to the desired colour.
 
