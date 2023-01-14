@@ -95,49 +95,47 @@ namespace AssignmentApp
                             }
                         }
 
-
                         if (parameter == "=")
                         {
                             int found = checkVariables(command);
                             if (found >= 0)
                             {
                                 variableNames[found] = command;
+
                                 try
                                 {
-                                    try
+                                    variableValues[found] = (int)dt.Compute(wholeCommandArray[2], "");
+                                }
+                                catch (System.Data.EvaluateException)
+                                {
+                                    secondParameter = wholeCommandArray[2];
+                                    string[] computeArray = secondParameter.Split(delimiterChar);
+                                    int found2 = checkVariables(computeArray[0]);
+                                    if (found2 >= 0)
                                     {
-                                        variableValues[found] = (int)dt.Compute(wholeCommandArray[2], "");
-                                    }
-                                    catch (System.Data.EvaluateException)
-                                    {
-                                        secondParameter = wholeCommandArray[2];
-                                        string[] computeArray = secondParameter.Split(delimiterChar);
-                                        int found2 = checkVariables(computeArray[0]);
-                                        if (found2 >= 0)
+                                        if (wholeCommandArray[2].Contains("+"))
                                         {
-                                            if (wholeCommandArray[2].Contains("+"))
-                                            {
-                                                variableValues[found] = Int32.Parse(computeArray[1]) + variableValues[found2];
-                                            }
-                                            if (wholeCommandArray[2].Contains("-"))
-                                            {
-                                                variableValues[found] = Int32.Parse(computeArray[1]) - variableValues[found2];
-                                            }
-                                            if (wholeCommandArray[2].Contains("*"))
-                                            {
-                                                variableValues[found] = Int32.Parse(computeArray[1]) * variableValues[found2];
-                                            }
-                                            if (wholeCommandArray[2].Contains("/"))
-                                            {
-                                                variableValues[found] = Int32.Parse(computeArray[1]) / variableValues[found2];
-                                            }
+                                            variableValues[found] = Int32.Parse(computeArray[1]) + variableValues[found2];
+                                        }
+                                        if (wholeCommandArray[2].Contains("-"))
+                                        {
+                                            variableValues[found] = Int32.Parse(computeArray[1]) - variableValues[found2];
+                                        }
+                                        if (wholeCommandArray[2].Contains("*"))
+                                        {
+                                            variableValues[found] = Int32.Parse(computeArray[1]) * variableValues[found2];
+                                        }
+                                        if (wholeCommandArray[2].Contains("/"))
+                                        {
+                                            variableValues[found] = Int32.Parse(computeArray[1]) / variableValues[found2];
                                         }
                                     }
+                                    else
+                                    {
+                                        errorFactory.ErrorHandle("variable declared not as an integer on line:" + programCounter + "\nPlease change to an integer to continue", "Format");
+                                    }
                                 }
-                                catch (System.FormatException)
-                                {
-                                    errorFactory.ErrorHandle("variable declared as string not integer on line:"+programCounter+"\nPlease change to an integer to continue", "Format");
-                                }
+
                             }
                             else
                             {
@@ -330,11 +328,6 @@ namespace AssignmentApp
                             canvas.ChangePen(parameter);
                         }
 
-                    }
-                    for (int i = 0; i < variableCounter; i++)
-                    {
-                        variableNames[i] = "";
-                        variableValues[i] = 0;
                     }
                 }
             } else
