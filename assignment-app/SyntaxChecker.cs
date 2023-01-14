@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace AssignmentApp
         {
             // splits the text by the new line
             String[] commandLine = text.ToLower().Split("\n");
-            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "drawto", "reset", "pen", "var",  };
+            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "drawto", "reset", "pen", "var", "loop", "end" , "=" };
             String[] wholeCommand;
             String command;
             bool check = false;
@@ -37,11 +38,12 @@ namespace AssignmentApp
                     {
                         check = true;
                     }
-                    else if (!arrayOfCommands.Contains(command))
+                    else if (wholeCommand[1].Contains("="))
                     {
-                        // breaks the loop if found false
+                        check = true;
+                    } else
+                    {
                         check = false;
-                        break;
                     }
                 }
 
