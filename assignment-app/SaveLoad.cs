@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AssignmentApp
 {
     public class SaveLoad
     {
+        /// <summary>Saves the specified text.</summary>
+        /// <param name="text">The text.</param>
         public void Save(string text)
         {
             // creates a windows save dialog with the predeinfed file name and type
@@ -27,6 +32,10 @@ namespace AssignmentApp
             WriteToFile(writer, text);
         }
 
+        /// <summary>Writes to file.</summary>
+        /// <param name="writer">The writer.</param>
+        /// <param name="text">The text.</param>
+        /// <exception cref="System.IO.IOException">An error occured while saving the prgram to the file system: {e.Message}</exception>
         internal void WriteToFile(StreamWriter writer, string text)
         {
             try
@@ -46,9 +55,38 @@ namespace AssignmentApp
             }
         }
 
-        public void Load(string text)
+        /// <summary>Loads the specified text.</summary>
+        /// <param name="text">The text.</param>
+        public string Load()
         {
-            //TODO: not yet implemented.
+            Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            string fileContents;
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            fileContents = File.ReadAllText(openFileDialog1.FileName);
+                            return fileContents;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+            return null;
         }
     }
       
