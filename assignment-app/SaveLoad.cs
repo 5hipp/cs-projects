@@ -63,7 +63,6 @@ namespace AssignmentApp
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             string fileContents;
 
-            openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;

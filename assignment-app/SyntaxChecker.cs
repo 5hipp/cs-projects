@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace AssignmentApp
 {
+
+    /// <summary>Class SyntaxChecker is to hold the methods that <see cref="CheckSyntax" /> within the program</summary>
     public class SyntaxChecker
     {
         /// <summary>
@@ -15,12 +17,13 @@ namespace AssignmentApp
         /// this method checks the syntax of the given text by comparing it to an array of pre defined commands.
         /// </summary>
         /// <param name="text"></param>
-        /// <returns></returns>
+        /// <returns>the check returned from this method simple defines if the syntax of the commands is correct or now
+        /// allowing the program to continue through runtime.</returns>
         public bool CheckSyntax(string text)
         {
             // splits the text by the new line
             String[] commandLine = text.ToLower().Split("\n");
-            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "drawto", "reset", "pen", "var", "loop", "end" , "=" };
+            String[] arrayOfCommands = { "moveto", "circle", "rectangle", "triangle", "drawto", "reset", "pen", "var", "loop", "end" , "=" , "fill" , "method", "meth" ,"call"};
             String[] wholeCommand;
             String command;
             bool check = false;

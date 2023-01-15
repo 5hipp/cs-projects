@@ -58,6 +58,7 @@ namespace AssignmentApp
         private void clearButton_Click(object sender, EventArgs e)
         {
             FormCanvas.Clear();
+            FormParser.Clear();
             Refresh();
         }
 
@@ -80,10 +81,10 @@ namespace AssignmentApp
             FormSaveLoad.Save(inputTextBox.Text);
         }
         
-        //not yet implemented
+        //loads a set of lines into the text box from a file
         private void loadButton_Click(object sender, EventArgs e)
         {
-            FormSaveLoad.Load(inputTextBox.Text);
+            inputTextBox.Text = FormSaveLoad.Load();
         }
 
         // checks the syntax of the inputbox text and reports to the log if correct or incorrect

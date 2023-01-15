@@ -42,19 +42,19 @@
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(12, 12);
-            this.inputTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.inputTextBox.Location = new System.Drawing.Point(21, 24);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(379, 335);
+            this.inputTextBox.Size = new System.Drawing.Size(647, 666);
             this.inputTextBox.TabIndex = 0;
             this.inputTextBox.Text = "";
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(12, 382);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(6);
+            this.submitButton.Location = new System.Drawing.Point(21, 764);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(78, 43);
+            this.submitButton.Size = new System.Drawing.Size(134, 86);
             this.submitButton.TabIndex = 2;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -62,10 +62,10 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(397, 382);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(6);
+            this.clearButton.Location = new System.Drawing.Point(681, 764);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(83, 43);
+            this.clearButton.Size = new System.Drawing.Size(142, 86);
             this.clearButton.TabIndex = 4;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // commandLineInput
             // 
             this.commandLineInput.AcceptsReturn = true;
-            this.commandLineInput.Location = new System.Drawing.Point(12, 353);
-            this.commandLineInput.Margin = new System.Windows.Forms.Padding(6);
+            this.commandLineInput.Location = new System.Drawing.Point(21, 706);
+            this.commandLineInput.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.commandLineInput.Name = "commandLineInput";
-            this.commandLineInput.Size = new System.Drawing.Size(379, 23);
+            this.commandLineInput.Size = new System.Drawing.Size(647, 35);
             this.commandLineInput.TabIndex = 1;
             this.commandLineInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.commandLineInput_KeyDown);
             // 
@@ -85,10 +85,10 @@
             // 
             this.outputCanvas.BackColor = System.Drawing.Color.Silver;
             this.outputCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.outputCanvas.Location = new System.Drawing.Point(397, 12);
-            this.outputCanvas.Margin = new System.Windows.Forms.Padding(6);
+            this.outputCanvas.Location = new System.Drawing.Point(681, 24);
+            this.outputCanvas.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.outputCanvas.Name = "outputCanvas";
-            this.outputCanvas.Size = new System.Drawing.Size(381, 364);
+            this.outputCanvas.Size = new System.Drawing.Size(650, 724);
             this.outputCanvas.TabIndex = 7;
             this.outputCanvas.TabStop = false;
             this.outputCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.outputCanvas_Paint);
@@ -97,19 +97,20 @@
             // outputLog
             // 
             this.outputLog.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.outputLog.Location = new System.Drawing.Point(186, 382);
-            this.outputLog.Margin = new System.Windows.Forms.Padding(6);
+            this.outputLog.Location = new System.Drawing.Point(319, 764);
+            this.outputLog.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.outputLog.Name = "outputLog";
             this.outputLog.ReadOnly = true;
-            this.outputLog.Size = new System.Drawing.Size(205, 43);
+            this.outputLog.Size = new System.Drawing.Size(349, 82);
             this.outputLog.TabIndex = 3;
             this.outputLog.Text = "";
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(604, 382);
+            this.saveButton.Location = new System.Drawing.Point(1035, 764);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(84, 43);
+            this.saveButton.Size = new System.Drawing.Size(144, 86);
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -117,9 +118,10 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(694, 382);
+            this.loadButton.Location = new System.Drawing.Point(1190, 764);
+            this.loadButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(84, 43);
+            this.loadButton.Size = new System.Drawing.Size(144, 86);
             this.loadButton.TabIndex = 9;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -127,9 +129,10 @@
             // 
             // syntaxCheckButton
             // 
-            this.syntaxCheckButton.Location = new System.Drawing.Point(99, 382);
+            this.syntaxCheckButton.Location = new System.Drawing.Point(170, 764);
+            this.syntaxCheckButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.syntaxCheckButton.Name = "syntaxCheckButton";
-            this.syntaxCheckButton.Size = new System.Drawing.Size(78, 43);
+            this.syntaxCheckButton.Size = new System.Drawing.Size(134, 86);
             this.syntaxCheckButton.TabIndex = 10;
             this.syntaxCheckButton.Text = "Check";
             this.syntaxCheckButton.UseVisualStyleBackColor = true;
@@ -137,9 +140,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 437);
+            this.ClientSize = new System.Drawing.Size(1354, 874);
             this.Controls.Add(this.syntaxCheckButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.saveButton);
@@ -149,8 +152,9 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.inputTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Form1";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.outputCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
