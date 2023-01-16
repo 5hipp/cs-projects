@@ -4,6 +4,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AssignmentApp
 {
+    /// <summary>This form class is the main entry point for the program, it holds all of the button handling and drawing panels.</summary>
     public partial class Form1 : Form
     {
         Canvas FormCanvas;
@@ -11,6 +12,7 @@ namespace AssignmentApp
         SaveLoad FormSaveLoad;
         SyntaxChecker checkSyntax;
 
+        /// <summary>Initializes a new instance of the <see cref="Form1" /> class.</summary>
         public Form1()
         {
             this.FormSaveLoad = new SaveLoad();
@@ -48,7 +50,10 @@ namespace AssignmentApp
                 FormParser.Parse(inputTextBox.Text);
                 Refresh();            
                 commandLineInput.Text = "";
-            }
+            } if (commandLineInput.Text.Trim().ToLower().Equals("clear")){
+                FormCanvas.Clear();
+                commandLineInput.Text = "";
+            }  
 
             e.Handled = true;
             e.SuppressKeyPress = true;

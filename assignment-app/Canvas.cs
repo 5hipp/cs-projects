@@ -9,6 +9,8 @@ using System.Xml.Schema;
 
 namespace AssignmentApp
 {
+    /// <summary>
+    /// The <see cref="Canvas" /> class contains all of the graphics commands regarding printing output to the panel, methods include <see cref="drawCircle" /><see cref="drawTriangle" /><see cref="changePen" /> etc.<br /></summary>
     public class Canvas
     {
         // Creation of bitmap and graphics variable, it is created here so that both the parser and form can reference the canvas commands.

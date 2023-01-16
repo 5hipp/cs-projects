@@ -45,6 +45,7 @@ namespace AssignmentTests
             Assert.AreEqual(100, c.cursorY);
         }
 
+        //tests the canvas drawTriangle method is parsing the information correctly
         [TestMethod]
         public void CanvasTriangleFunctionality()
         {
@@ -58,6 +59,7 @@ namespace AssignmentTests
 
         }
 
+        //tests the canvas drawRectangle method is parsing height and width correctly
         [TestMethod]
         public void CanvasRectangleFunctionality()
         {
@@ -69,6 +71,7 @@ namespace AssignmentTests
             Assert.AreEqual(100, c.width);
         }
 
+        //tests the canvas drawCircle method is parsing radius correctly
         [TestMethod]
         public void CanvasCircleFunctionality()
         {
@@ -79,6 +82,7 @@ namespace AssignmentTests
             Assert.AreEqual(100, c.radius);
         }
 
+        //tests the canvas changePen method is correctly changing the pen color to the one inputted, regardless of case or trim.
         [TestMethod]
         public void PenColorFunctionality()
         {
@@ -97,6 +101,10 @@ namespace AssignmentTests
 
             Assert.AreEqual(Color.Blue, c.Pen.Color);
         }
+
+
+
+
 
         /// <summary>
         /// Tests below this point are more aimed towards part two of the assignment
@@ -120,6 +128,25 @@ namespace AssignmentTests
             Assert.AreEqual(200, c.cursorY);
         }
 
+        //ensures that the program counter is counting correctly, essential for loops and methods.
+        [TestMethod]
+        public void ParserProgramCounter()
+        {
+            Canvas c = new Canvas();
+            Parser p = new Parser(c);
+
+            string command = "method test\nmeth end\nvar x\nx = 100\ncircle x";
+            p.Parse(command);
+
+            Assert.AreEqual(5, p.programCounter);
+        }
+
+
+
+
+
+
+
         //this tests checks the clear method within the parser that clears saved variables
         //parameters, methods and all positions as not to confuse the duplicate variable check
         [TestMethod]
@@ -138,19 +165,6 @@ namespace AssignmentTests
 
             Assert.AreEqual(0, p.methodCounter);
             Assert.AreEqual(0, p.variableCounter);
-        }
-
-        //ensures that the program counter is counting correctly, essential for loops and methods.
-        [TestMethod]
-        public void ParserProgramCounter()
-        {
-            Canvas c = new Canvas();
-            Parser p = new Parser(c);
-
-            string command = "method test\nmeth end\nvar x\nx = 100\ncircle x";
-            p.Parse(command);
-
-            Assert.AreEqual(5, p.programCounter);
         }
 
         //checks the VariableCounter is counting correctly and finding the correct variable when called
@@ -215,37 +229,5 @@ namespace AssignmentTests
             i = p.checkMethod("test");
             Assert.AreEqual(0, i);
         }
-
-
-        /*
-        [TestMethod]
-        //Checks that when invalid parameters are parsed, an exception is thrown
-        
-        public void ParserInvalidParameterTest() 
-        {
-            Canvas c = new Canvas();
-            Parser p = new Parser(c);
-
-            String commands = "moveto ab ab";
-
-            Assert.ThrowsException<FormatException>(() => p.Parse(commands));
-        }
-
-        [TestMethod]
-        public void ParserLoopTest()
-        {
-            Canvas c = new Canvas();
-            Parser p = new Parser(c);
-
-            string commands = "var x\nx = 100\nloop 5\nx = x+10\ncircle x\nend loop";
-            p.Parse(commands);
-
-            int value = p.checkVariables("x");
-
-            Assert.AreEqual(150, p.variableValues[value]);
-        }
-        */
-
-
     }
 }

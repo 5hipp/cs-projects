@@ -43,15 +43,15 @@ namespace AssignmentApp
         public int methodCounter = 0;
         public int programCounter = 0;
 
-        /// <summary>Parses the specified text.</summary>
+        /// <summary>Parses the inputted text into commands.</summary>
+        /// <param name="text">The text passed over from the main input form <see cref="Form1" /></param>
         /// the parse method splits the given text into its parameters and commands, then forwards these to the canvas class to be drawn to the screen
         /// there is a try catch system to prevent invalid parameters being parsed.
-        /// <param name="text">The text.</param>
         public void Parse(string text)
         {
             // splits the input by line
             string[] commandLine = text.ToLower().Split("\n");
-            string[] wholeCommandArray = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+            string[] wholeCommandArray = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
             char[] delimiterChar = { '+', '-', '*', '/' };
             string command;
             string parameter;
@@ -78,10 +78,9 @@ namespace AssignmentApp
                     {
                         // splits by space and assigns to string
                         wholeCommandArray = commandLine[programCounter].Split(' ');
-
                         command = wholeCommandArray[0];
                         parameter = wholeCommandArray[1];
-
+                        
                         if (command == "meth" && methodExecuting == false)
                         {
                             methodFlag = false;
@@ -108,19 +107,7 @@ namespace AssignmentApp
                             methodFlag = true;
                         }
 
-                        if (command == "meth" && methodExecuting == false)
-                        {
-                            methodFlag = false;
-                        }
-                        
-
-                        if (command == "meth" && methodExecuting == true)
-                        {
-                            methodExecuting = false;
-                            programCounter = saveProgramCounter;
-                            continue;
-                        }
-
+                        //finding the method in the array, finding its location and moving the programcounter to it
                         if (command == "call")
                         {
                             int found = checkMethod(parameter);
@@ -548,6 +535,7 @@ namespace AssignmentApp
                             {
                                 variableNames[i] = "";
                                 variableValues[i] = 0;
+                                canvas.Clear();
                             }
                         } else if (command == "fill".Trim().ToLower())
                         {

@@ -9,6 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AssignmentApp
 {
+    /// <summary>The <see cref="SaveLoad" /> class houses the Saving and Loading methods, allowing for the extraction and insertion of code from a file into the program.</summary>
     public class SaveLoad
     {
         /// <summary>Saves the specified text.</summary>
