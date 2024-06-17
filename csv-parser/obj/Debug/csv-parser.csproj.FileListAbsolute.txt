@@ -1,0 +1,10 @@
+C:\Users\Pentest\source\repos\csv-parser\bin\Debug\csv-parser.exe.config
+C:\Users\Pentest\source\repos\csv-parser\bin\Debug\csv-parser.exe
+C:\Users\Pentest\source\repos\csv-parser\bin\Debug\csv-parser.pdb
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv-parser.csproj.AssemblyReference.cache
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv_parser.Form1.resources
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv_parser.Properties.Resources.resources
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv-parser.csproj.GenerateResource.cache
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv-parser.csproj.CoreCompileInputs.cache
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv-parser.exe
+C:\Users\Pentest\source\repos\csv-parser\obj\Debug\csv-parser.pdb
